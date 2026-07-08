@@ -1,0 +1,100 @@
+Para iniciar o mongodb no cmd digite:
+mongosh
+
+Para criar um banco de dados:
+use primeirobanco
+
+Para criar uma collectiom:
+db.primeiracollection.insertOne({nome: 'Matheus' , idade: 30})
+
+Para verificar os banco que existem:
+show dbs
+
+Para encontrar o dado que foi gravado na collection:
+db.primeiracollection.findOne
+
+Vamos inserir mais um dado, nessa mesma colection:
+db.primeiracollection.insertOne({nome: 'João', idade: 32, profissao: 'Progamador'})
+
+Para ver todos os dados que estão na collection:
+db.primeiracollection.find()
+
+Criando um banco de dados:
+use crud
+
+Criando colection e document:
+db.create.insertOne({nome: 'Wecton', idade:20, trabalha: true,hobbies:['Jogar futebol','cinema']})
+
+Exibir documentos:
+db.create.find()
+
+Criando um nova colection com vários documentos ao mesmo tempo;
+db.provas.insertMany([
+{ nome: 'Nicolle', notas: [10,8,8]},
+{nome: 'Samuel', notas:[10,8,8]}
+])
+
+Vendo os documentos:
+db.provas.find()
+
+Criando um documento com o próprio id:
+db.provas.insertOne({_id: "100", nome: "Leonardo", notas: [9, 7, 8]})
+ 
+Vendo os documentos:
+db.provas.find()
+
+Exibir collections:
+show collections
+
+Alterando um dado da lista usando update:
+db.provas.updateOne({ nome: 'Nicolle'}, {$set: { notas:[10,9,8] } })
+
+Vendo os documentos após a atualiação
+dp.provas.find()
+
+Adicionando o campo aprovado: true em todosas documentos ao mesmo tempo:
+db.provas.updateMany({},{ $set: {aprovado: true } })
+
+Vendo os documentos após a atualiação:
+db.provas.find()
+
+Removendo um documento especídico:
+db.provas.deleteOne({nome:'Samuel'})
+
+Vendo os documentos após a exclusão:
+db.provas.find()
+
+Removendo todos os documentos:
+db.provas.deleteMany({})
+
+Deletando uma colection:
+db.provas.drop()
+
+Exibindo collections
+show collections
+
+Deletando mais uma collection:
+db.create.drop()
+
+Exibindo collections:
+show collections
+
+Exibindo banco de dados:
+show dbs
+
+Acessando o banco:
+use crud
+
+Depois excluindo o banco acima que foi acessado:
+db.dropDatabase()
+
+
+
+
+Depois excluindo o banco acima que foi acessado:
+db.dropDatabase()
+
+Exibindo banco de dados
+show dbs
+
+
