@@ -57,3 +57,14 @@ SET peso = 70.00;
  Delete FROM cliente
 WHERE cpf = 12345678901;
 
+DELETE FROM cliente
+WHERE cpf = 23456789012;
+
+--Deletando a tabela cliente 
+DROP TABLE cliente
+
+--Delete o banco de dados -  MUito cuidado
+DROP DATABASE anafit;
+
+
+
